@@ -2,7 +2,7 @@
 ## Product Requirements Document
 
 **Institution:** Pwani University  
-**Status:** Consolidated implementation draft. The user asked to begin building after the architecture recommendation; the modular Express/MySQL direction is accepted for the initial implementation. External providers and deployment remain undecided.
+**Status:** Consolidated implementation draft. The user asked to begin building after the architecture recommendation; the modular Express/MySQL direction was the initial implementation; the user later chose a free Aiven PostgreSQL plan, so the application now has a PostgreSQL adapter and a one-time schema initializer; live Aiven connectivity remains to be verified. External providers and deployment remain undecided.
 
 ## Source and decision hierarchy
 

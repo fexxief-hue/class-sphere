@@ -8,7 +8,7 @@ class MySQLSessionStore extends session.Store {
       [sessionId]
     ).then(([rows]) => {
       if (!rows.length) return callback(null, null);
-      try { callback(null, JSON.parse(rows[0].session_data)); }
+      try { const data = rows[0].session_data; callback(null, typeof data === 'string' ? JSON.parse(data) : data); }
       catch (error) { callback(error); }
     }).catch(callback);
   }

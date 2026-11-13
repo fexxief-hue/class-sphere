@@ -7,9 +7,10 @@
     "node": ">=22"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node scripts/migrate-postgres.js && node src/server.js",
     "dev": "node --watch src/server.js",
-    "create-admin": "node scripts/create-admin.js"
+    "create-admin": "node scripts/create-admin.js",
+    "migrate:postgres": "node scripts/migrate-postgres.js"
   },
   "dependencies": {
     "argon2": "^0.45.2",
@@ -18,11 +19,11 @@
     "express": "^5.1.0",
     "express-rate-limit": "^8.7.4",
     "express-session": "^1.19.0",
+    "file-type": "^22.0.0",
     "helmet": "^8.1.0",
-    "mysql2": "^3.14.0",
-    "nodemailer": "^10.0.10",
     "multer": "^2.0.2",
-    "file-type": "^22.0.0"
+    "nodemailer": "^10.0.10",
+    "pg": "^8.23.1"
   },
   "allowScripts": {
     "argon2": true
